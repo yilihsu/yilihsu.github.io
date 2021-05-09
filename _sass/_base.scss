@@ -194,6 +194,52 @@ a, table.table a {
   }
 }
 
+// Others
+
+.education, .work-experience {
+  .row {
+    text-align: center;
+    margin-top:10px;
+  }
+  h4 {
+    font-size: 1rem;
+    margin-bottom: 0px;
+  }
+  em {
+    font-size: 0.8rem;
+    display: block;
+    margin-top: 2px;
+  }
+  span {
+    color: var(--global-text-color-light);
+	font-size: 0.8rem;
+    display: block;
+  }
+  .org-logo {
+    height: 100px;
+  }
+  .usb-logo {
+    background: url(../img/usb.svg) no-repeat center;
+    background-size: auto 60%;
+  }
+  .umd-logo {
+    background: url(../img/umd.svg) no-repeat center;
+    background-size: auto 80%;
+  }
+  .facebook-logo {
+    background: url(../img/facebook.svg) no-repeat center;
+    background-size: auto 100%;
+  }
+  .vi-logo {
+    background: url(../img/vi.svg) no-repeat center;
+    background-size: auto 35%;
+  }
+}
+
+.about-content-block {
+  margin-top: 2rem !important;
+}
+
 
 // News
 

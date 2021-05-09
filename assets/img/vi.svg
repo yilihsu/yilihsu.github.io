@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 291 83" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g id="Artboard1" transform="matrix(1,0,0,1,-377.902,-1067.04)">
+        <rect x="377.902" y="1067.04" width="290.394" height="82.875" style="fill:none;"/>
+        <g transform="matrix(1,0,0,1,-214.231,227.704)">
+            <g transform="matrix(0.913773,0,0,0.913773,112.916,-239.407)">
+                <text x="528.909px" y="1221.13px" style="font-family:'Ubuntu-Medium', 'Ubuntu', sans-serif;font-weight:500;font-size:48px;fill:rgb(122,122,117);">V<tspan x="559.773px " y="1221.13px ">e</tspan>nez<tspan x="665.373px " y="1221.13px ">u</tspan>ela</text>
+            </g>
+            <g transform="matrix(0.911196,0,0,0.911196,173.79,-201.75)">
+                <text x="528.909px" y="1221.13px" style="font-family:'Ubuntu-Medium', 'Ubuntu', sans-serif;font-weight:500;font-size:48px;fill:rgb(12,0,102);">int<tspan x="589.869px " y="1221.13px ">e</tspan>ligent<tspan x="748.029px " y="1221.13px ">e</tspan></text>
+            </g>
+            <g transform="matrix(1,0,0,1,3.69422,-16.4136)">
+                <g transform="matrix(6.3397e-17,1.03535,-0.937175,5.73854e-17,1455.22,262.254)">
+                    <path d="M626.414,880.775L641.907,911.761L610.921,911.761L626.414,880.775Z" style="fill:rgb(12,162,228);"/>
+                </g>
+                <g transform="matrix(6.3397e-17,1.03535,-0.937175,5.73854e-17,1476.33,262.254)">
+                    <path d="M626.414,880.775L641.907,911.761L610.921,911.761L626.414,880.775Z" style="fill:rgb(12,162,228);"/>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
