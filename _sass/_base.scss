@@ -45,11 +45,11 @@ a, table.table a {
 .back-header-about {
   position: absolute;
   width: 100%;
-  top: 57px;
+  top: 0px;
   left: 0px;
-  height: 170px;
+  height: 227px;
   background: url(../../assets/img/back.jpg);
-  background-size: contain;
+  background-size: cover;
   background-repeat: round;
   z-index: -1;
 }
