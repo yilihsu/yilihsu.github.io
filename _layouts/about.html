@@ -4,7 +4,10 @@ layout: default
 
 <div class="post">
 
-  <header class="post-header">
+  <header class="back-header-about">
+  </header>
+
+  <header class="post-header header-about">
     <h1 class="post-title">
      {% if site.title == "blank" %}<span class="font-weight-bold">{{ site.first_name }}</span> {{ site.middle_name }} {{ site.last_name }}{% else %}{{ site.title }}{% endif %}
     </h1>
@@ -22,6 +25,14 @@ layout: default
           {{ page.profile.address }}
         </div>
       {% endif %}
+	  {% if page.social %}
+        <div class="social">
+          <div class="contact-icons">
+            {% include social.html %}
+          </div>
+          <div class="contact-note">{{ site.contact_note }}</div>
+        </div>
+      {% endif %}
     </div>
     {% endif %}
 
@@ -35,16 +46,7 @@ layout: default
 
     {% if page.selected_papers %}
       {% include selected_papers.html %}
-    {% endif %}
-
-    {% if page.social %}
-    <div class="social">
-      <div class="contact-icons">
-        {% include social.html %}
-      </div>
-      <div class="contact-note">{{ site.contact_note }}</div>
-    </div>
-    {% endif %}
+    {% endif %} 
   </article>
 
 </div>

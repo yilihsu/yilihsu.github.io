@@ -31,7 +31,7 @@
               {% endif %}
             </a>
           </li>
-          {% if site.blog_name %}
+          {% if site.blog_name and false %}
           <!-- Blog -->
           <li class="nav-item {% if page.url contains 'blog' %}active{% endif %}">
             <a class="nav-link" href="{{ '/blog/' | relative_url }}">
@@ -45,9 +45,9 @@
           <!-- Other pages -->
           {% assign sorted_pages = site.pages | sort: "title" %}
           {% for p in sorted_pages %}
-          {% if p.nav and p.autogen == nil %}
+          {% if p.nav and p.autogen == nil and p.title == "Publications" %}
           <li class="nav-item {% if page.title == p.title %}active{% endif %}">
-              <a class="nav-link" href="{{ p.url | relative_url }}">
+              <a class="nav-link text-lowercase" href="{{ p.url | relative_url }}">
                 {{ p.title }}
                 {% if page.title == p.title %}
                 <span class="sr-only">(current)</span>
