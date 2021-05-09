@@ -14,17 +14,9 @@ a, table.table a {
     color: var(--global-theme-color);
     text-decoration: underline;
   }
-  &:hover:after :not(.nav-item.dropdown) {
+  &:hover:after {
     width: 100%;
   }
-}
-
-blockquote {
-  background: var(--global-bg-color);
-  border-left: 2px solid var(--global-theme-color);
-  margin: 1.5em 10px;
-  padding: 0.5em 10px;
-  font-size: 1.2rem;
 }
 
 // Math
@@ -50,14 +42,44 @@ blockquote {
 
 // Profile
 
+.back-header-about {
+  position: absolute;
+  width: 100%;
+  top: 57px;
+  left: 0px;
+  height: 170px;
+  background: url(../../assets/img/back.jpg);
+  background-size: contain;
+  background-repeat: round;
+  z-index: -1;
+}
+
+.header-about {
+  h1, span, p {
+    color: white !important;
+	margin: 0px;
+    text-shadow: 1px 3px 3px rgba($black-color,0.33), 2px 5px 5px rgba($black-color,0.12) !important;
+  }
+  p {
+    margin-bottom:100px;
+    margin-left:2px;
+  }
+}
+
 .profile {
   margin-left: 1rem;
+  margin-top: -168px;
   width: 100%;
+
+  > img {
+    border-radius: 50% !important;
+  }
 
   .address {
     margin-bottom: 5px;
     margin-top: 5px;
     font-family: monospace;
+    font-size: 1.2rem;
     p {
       display: inline-block;
       margin: 0;
@@ -92,24 +114,9 @@ blockquote {
 .navbar {
   box-shadow: none;
   border-bottom: 1px solid $grey-color-light;
+  //background:url(http://www.afloresv.com/res/back.jpg);
+  //background-position: 50% -300px;
   background-color: var(--global-bg-color);
-  opacity: 0.95;
-}
-.navbar .dropdown-menu {
-  background-color: var(--global-bg-color);
-  a:not(.active) {
-    color: var(--global-text-color);
-  }
-  a:hover {
-    color: var(--global-hover-color);
-  }
-}
-.dropdown-item {
-  color: var(--global-text-color);
-    &:hover {
-      color: var(--global-hover-color);
-      background-color: var(--global-bg-color);
-    }
 }
 .navbar.navbar-light {
   a {
@@ -203,8 +210,10 @@ blockquote {
 
 .social {
   text-align: center;
+  padding-bottom: 20px;
   .contact-icons {
-    font-size: 4rem;
+    font-size: 1.6rem;
+	margin-top: 30px;
     a {
       i::before {
         color: var(--global-text-color);
@@ -318,38 +327,55 @@ footer.sticky-bottom {
 // Projects
 
 .projects {
-  a {
-    text-decoration: none;
-
-    &:hover {
-      .card-title {
-        color: var(--global-theme-color);
-      }
-    }
-  }
-
-  .card {
-    img {
-      width: 100%;
-    }
-    .card-title {
-      color: $black-color;
-    }
-  }
-
   .card-item {
     width: auto;
     margin-bottom: 10px;
+
+    a {
+      text-decoration: none;
+    }
 
     .row {
       display: flex;
       align-items: center;
     }
+
+    .card {
+      img {
+        width: 100%;
+      }
+    }
   }
 
   .grid-item {
-    width: 250px;
-    margin-bottom: 10px;
+    width: 375px;
+    margin-bottom: 20px;
+
+    a {
+      color: black;
+      text-decoration: none;
+
+      &:hover {
+        color: var(--global-theme-color);
+      }
+    }
+
+    .card {
+      img {
+        width: 100%;
+      }
+      .card-title {
+        color: $black-color;
+        font-weight: 300 !important;
+        font-size: 30px;
+        mjx-container {
+          display: inline !important;
+        }
+      }
+      .card-text {
+        font-weight: 300 !important;
+      }
+    }
   }
 
   h2.category {
@@ -359,6 +385,14 @@ footer.sticky-bottom {
     margin-top: 2rem;
     margin-bottom: 1rem;
     text-align: right;
+  }
+}
+
+.post {
+  .post-title {
+    mjx-container {
+     display: inline !important;
+    }
   }
 }
 
@@ -401,8 +435,7 @@ footer.sticky-bottom {
         abbr {
           display: inline-block;
           background-color: var(--global-theme-color);
-          padding-left: 1rem;
-          padding-right: 1rem;
+          padding: 0.5rem 1rem;
           a {
             color: white;
             &:hover {
@@ -419,6 +452,7 @@ footer.sticky-bottom {
         font-weight: bolder;
       }
       .author {
+		color: var(--global-text-color-light);
         a {
           border-bottom: 1px dashed var(--global-theme-color);
           &:hover {
@@ -430,6 +464,9 @@ footer.sticky-bottom {
           border-bottom: 1px solid;
           font-style: normal;
         }
+      }
+      .periodical, .periodical > em {
+        color: var(--global-text-color-light);
       }
       .links {
         a.btn {

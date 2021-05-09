@@ -1,18 +1,15 @@
-"Adams":
-  - firstname: ["Edwin", "E.", "E. P.", "Edwin Plimpton"]
-    url: https://en.wikipedia.org/wiki/Edwin_Plimpton_Adams
+"Mount":
+  - firstname: ["David", "D.", "D. M.", "David M."]
+    url: https://www.cs.umd.edu/users/mount/
 
-"Podolsky":
-  - firstname: ["Boris", "B.", "B. Y.", "Boris Yakovlevich"]
-    url: https://en.wikipedia.org/wiki/Boris_Podolsky
+"Vidal":
+  - firstname: ["Maria-Esther", "M. E."]
+    url: https://www.tib.eu/de/forschung-entwicklung/scientific-data-management/mitarbeiterinnen-und-mitarbeiter/maria-esther-vidal
 
-"Rosen":
-  - firstname: ["Nathan", "N."]
-    url: https://en.wikipedia.org/wiki/Nathan_Rosen
+"Raschid":
+  - firstname: ["Louiqa", "L."]
+    url: http://users.umiacs.umd.edu/~louiqa/
 
-"Bach": 
-  - firstname: ["Johann Sebastian", "J. S."]
-    url: https://en.wikipedia.org/wiki/Johann_Sebastian_Bach
-
-  - firstname: ["Carl Philipp Emanuel", "C. P. E."]
-    url: https://en.wikipedia.org/wiki/Carl_Philipp_Emanuel_Bach
+"Palma":
+  - firstname: ["Guillermo", "G."]
+    url: https://scholar.google.com/citations?user=zXgOy6sAAAAJ&hl=en

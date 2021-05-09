@@ -1,7 +1,7 @@
 ---
 layout: page
-title: project 1
-description: a project with a background image
+title: Condensation meets Theory
+description: Nearest-neighbor condensation heuristics with theoretical guarantees.
 img: /assets/img/12.jpg
 importance: 1
 category: work
