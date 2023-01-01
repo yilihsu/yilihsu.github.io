@@ -28,11 +28,11 @@ $grey-color-light:    lighten($grey-color, 40%);
 $grey-color-dark:     #1C1C1D;
 $grey-900:            #212529;
 
-$white-color: #ffffff !default;
-$black-color: #000000 !default;
+$white-color: #F4F1F0 !default;
+$black-color: #3E3A39 !default;
 
 
 // Theme colors
 
-$code-bg-color-light:     rgba($purple-color, 0.05);
-$code-bg-color-dark:      #2c3237 !default;
+$code-bg-color-light:     rgba($blue-color, 0.05);
+$code-bg-color-dark:      #3E3A39 !default;
