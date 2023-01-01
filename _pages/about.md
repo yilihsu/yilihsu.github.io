@@ -3,7 +3,7 @@ layout: about
 title: about
 permalink: /
 subtitle: <a href='https://academiasinicanlplab.github.io/#members'>Natural Language Processing and Sentiment Analysis Lab, Academia Sinica </a>
-<a href='https://dcs.site.nthu.edu.tw'>Department of Computer Science, National Tsing Hua University </a>
+#<a href='https://dcs.site.nthu.edu.tw'>Department of Computer Science, #National Tsing Hua University </a>
 
 profile:
   align: left
