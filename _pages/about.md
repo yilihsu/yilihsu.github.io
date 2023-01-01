@@ -20,5 +20,5 @@ I am currently in the first year of my Ph.D. from the [Department of Computer Sc
 
 My current research revolves around generating fake news explanations, showing that counterfactual explanations are more effective than warning tags and summarization-based explanations. Additionally, I have been working on proposing a new method incorporating semantic graphs to better capture the context across the line and Elaboration Likelihood Model to customize explanations for each individual.
 
-Before my current study, I got a bachelor's degree in Computer Science at National Tsing Hus University and did graduate research with [Prof. Yuan-Hao Chang] on optimization of non-volatile memory storage architecture. 
+Before my current study, I got a bachelor's degree in Computer Science at National Tsing Hus University and did graduate research with [Prof. Yuan-Hao Chang](https://www.iis.sinica.edu.tw/~johnson/) on optimization of non-volatile memory storage architecture. 
 
