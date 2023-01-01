@@ -5,6 +5,7 @@ group :jekyll_plugins do
     gem 'jekyll-feed'
     gem 'jekyll-archives'
     gem 'jekyll-imagemagick'
+    gem 'jekyll-diagrams'
     gem 'jekyll-minifier'
     gem 'jekyll-paginate-v2'
     gem 'jekyll-scholar'
