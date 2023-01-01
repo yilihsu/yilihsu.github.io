@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: Ph.D. student at National Tsing Hua University <a href='https://dcs.site.nthu.edu.tw'> and <a href='https://academiasinicanlplab.github.io/#members'> Natural Language Processing and Sentiment Analysis Lab, Academia Sinica </a>
+subtitle: Ph.D. student at <a href='https://dcs.site.nthu.edu.tw'> National Tsing Hua University </a> and <a href='https://academiasinicanlplab.github.io/#members'> Natural Language Processing and Sentiment Analysis Lab, Academia Sinica </a>
 #<a href='https://dcs.site.nthu.edu.tw'>Department of Computer Science, #National Tsing Hua University </a>
 
 profile:
