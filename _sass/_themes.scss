@@ -5,7 +5,7 @@
 :root {
   --global-bg-color: #{$white-color};
   --global-code-bg-color: #{$code-bg-color-light};
-  --global-text-color: #{$white-color};
+  --global-text-color: #{$black-color};
   --global-text-color-light: #{$white-color};
   --global-theme-color: #{$blue-color};
   --global-hover-color: #{$blue-color};
@@ -36,8 +36,8 @@
 html[data-theme='dark'] {
   --global-bg-color: #{$grey-color-dark};
   --global-code-bg-color: #{$code-bg-color-dark};
-  --global-text-color: #{$grey-color-dark};
-  --global-text-color-light: #{$grey-color-dark};
+  --global-text-color: #{$grey-color-light};
+  --global-text-color-light: #{$grey-color-light};
   --global-theme-color: #{$cyan-color};
   --global-hover-color: #{$cyan-color};
   --global-footer-bg-color: #{$grey-color-light};
