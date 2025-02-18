@@ -16,9 +16,9 @@ selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-I am currently in the second year of my Ph.D. from the Department of Computer Science at National Tsing Hua University, supervised by [Prof. Lun-Wei Ku](https://homepage.iis.sinica.edu.tw/pages/lwku/index_en.html) and [Prof. Wei-Kuan Shih](https://dblp.org/pid/16/5006.html). My research interests generally lie in Natural Language Processing, Explanation generation, and Fake News Debunking.
+I am currently in the third year of my Ph.D. from the Department of Computer Science at National Tsing Hua University, supervised by [Prof. Lun-Wei Ku](https://homepage.iis.sinica.edu.tw/pages/lwku/index_en.html) and [Prof. Wei-Kuan Shih](https://dblp.org/pid/16/5006.html). My research interests generally lie in Natural Language Processing, Explanation generation, Fake News Debunking, and Multi-document Summarization.
 
 I am also a visiting student intern at the iSchool, University of Washington, where I am advised by [Prof. Lucy Lu Wang](https://llwang.net/).
 
-My current research revolves around hierarchical multi-document summarization on scientific papers and fake news explanations generation. Before my current study, I got a bachelor's degree in Computer Science at National Tsing Hus University and did graduate research with [Prof. Yuan-Hao Chang](https://www.iis.sinica.edu.tw/~johnson/) on optimization of non-volatile memory storage architecture. 
+My current research revolves around hierarchical multi-document summarization on scientific papers and Human-AI collaboration in explanations generation. Before my current study, I got a bachelor's degree in Computer Science at National Tsing Hus University and did graduate research with [Prof. Yuan-Hao Chang](https://www.iis.sinica.edu.tw/~johnson/) on optimization of non-volatile memory storage architecture. 
 
