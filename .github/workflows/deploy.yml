@@ -2,41 +2,65 @@ name: deploy
 
 on:
   push:
-    branches:
-      - master
-      - main
+    branches: [ master, main ]
   pull_request:
-    branches:
-      - master
-      - main
+    branches: [ master, main ]
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v3
-    - name: Setup Ruby
-      uses: ruby/setup-ruby@v1
-      with:
-        ruby-version: '3.0.2'
-        bundler-cache: true
-    - name: Install deps
-      run: |
-        npm install -g mermaid.cli
-    - name: Setup deploy options
-      id: setup
-      run: |
-        git config --global user.name "GitHub Action"
-        git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
-        if [[ ${GITHUB_REF} = refs/pull/*/merge ]]; then # pull request
-          echo "SRC_BRANCH=${GITHUB_HEAD_REF}" >> $GITHUB_OUTPUT
-          echo "NO_PUSH=--no-push" >> $GITHUB_OUTPUT
-        elif [[ ${GITHUB_REF} = refs/heads/* ]]; then # branch, e.g. master, source etc
-          echo "SRC_BRANCH=${GITHUB_REF#refs/heads/}" >> $GITHUB_OUTPUT
-        fi
-        echo "DEPLOY_BRANCH=gh-pages" >> $GITHUB_OUTPUT
-    - name: Deploy website 
-      run:  yes | bash bin/deploy --verbose ${{ steps.setup.outputs.NO_PUSH }}
-                    --src ${{ steps.setup.outputs.SRC_BRANCH }} 
-                    --deploy ${{ steps.setup.outputs.DEPLOY_BRANCH }} 
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.2.2'
+          bundler-cache: false   # we'll install bundler first, then bundle install
+
+      - name: Install system dependencies (for diagrams/images)
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y graphviz imagemagick librsvg2-bin
+          # Optional: allow SVG → PNG with ImageMagick on CI if policy blocks it
+          if grep -q "disable ghostscript format types" /etc/ImageMagick-6/policy.xml 2>/dev/null; then
+            sudo sed -i 's/rights="none"/rights="read|write"/g' /etc/ImageMagick-6/policy.xml || true
+          fi
+
+      - name: Install Bundler (2.5.x)
+        run: |
+          gem install bundler -v "~> 2.5" --no-document
+          bundle _2.5.0_ --version
+
+      - name: Bundle install
+        run: |
+          bundle _2.5.0_ config set path 'vendor/bundle'
+          bundle _2.5.0_ install --jobs 4 --retry 3
+
+      - name: Install Mermaid CLI (for jekyll-diagrams, if you use mermaid)
+        run: |
+          npm i -g @mermaid-js/mermaid-cli
+
+      - name: Setup deploy options
+        id: setup
+        run: |
+          git config --global user.name "GitHub Action"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if [[ ${GITHUB_REF} = refs/pull/*/merge ]]; then
+            echo "SRC_BRANCH=${GITHUB_HEAD_REF}" >> $GITHUB_OUTPUT
+            echo "NO_PUSH=--no-push" >> $GITHUB_OUTPUT
+          elif [[ ${GITHUB_REF} = refs/heads/* ]]; then
+            echo "SRC_BRANCH=${GITHUB_REF#refs/heads/}" >> $GITHUB_OUTPUT
+          fi
+          echo "DEPLOY_BRANCH=gh-pages" >> $GITHUB_OUTPUT
+
+      - name: Build & Deploy
+        env:
+          JEKYLL_ENV: production
+          CI: "1"  # make deploy non-interactive
+        run: |
+          yes | bash bin/deploy --verbose \
+            --src "${{ steps.setup.outputs.SRC_BRANCH }}" \
+            --deploy "${{ steps.setup.outputs.DEPLOY_BRANCH }}" \
+            ${{ steps.setup.outputs.NO_PUSH }}
