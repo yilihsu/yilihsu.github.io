@@ -28,15 +28,15 @@ jobs:
             sudo sed -i 's/rights="none"/rights="read|write"/g' /etc/ImageMagick-6/policy.xml || true
           fi
 
-      - name: Install Bundler (2.5.x)
+      - name: Install Bundler
         run: |
-          gem install bundler -v "~> 2.5" --no-document
-          bundle _2.5.0_ --version
-
+          gem install bundler -v "$BUNDLER_VERSION" --no-document
+          bundle --version
+      
       - name: Bundle install
         run: |
-          bundle _2.5.0_ config set path 'vendor/bundle'
-          bundle _2.5.0_ install --jobs 4 --retry 3
+          bundle config set path 'vendor/bundle'
+          bundle install --jobs 4 --retry 3
 
       - name: Install Mermaid CLI (for jekyll-diagrams, if you use mermaid)
         run: |
